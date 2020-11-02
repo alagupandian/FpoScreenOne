@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivNewsEventsThumbnail"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:src="@drawable/news_events_pic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.01"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvNewsEventsTitle"
+        android:layout_width="@dimen/o"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:text="@string/event"
+        android:textColor="@color/dark_orange"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/ivNewsEventsThumbnail"
+        app:layout_constraintStart_toEndOf="@+id/ivNewsEventsThumbnail"
+        app:layout_constraintTop_toTopOf="@+id/ivNewsEventsThumbnail"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvNewsEventsName"
+        android:layout_width="@dimen/o"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:text="@string/news_events_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:maxLines="2"
+        android:ellipsize="end"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tvNewsEventsTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvNewsEventsTitle" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvNewsDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/news_events_day"
+        app:layout_constraintBottom_toBottomOf="@+id/tvNewsEventsTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.91"
+        app:layout_constraintStart_toEndOf="@+id/tvNewsEventsTitle"
+        app:layout_constraintTop_toTopOf="@+id/tvNewsEventsTitle"
+        app:layout_constraintVertical_bias="0.6" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvEventsDate"
+        android:layout_width="@dimen/o"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:text="@string/news_events_date_time"
+        app:layout_constraintEnd_toEndOf="@+id/tvNewsEventsName"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tvNewsEventsName"
+        app:layout_constraintTop_toBottomOf="@+id/tvNewsEventsName" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivRvDivider"
+        android:layout_width="@dimen/o"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEventsDate"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_divider"
+        tools:ignore="VectorDrawableCompat" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

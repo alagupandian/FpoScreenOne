@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#FFFFFF"
+
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/headerPictureOne"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_160sdp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.666"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/mask_group" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/headerPictureTwo"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+
+            app:layout_constraintBottom_toBottomOf="@+id/headerPictureOne"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.06"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.13"
+            app:srcCompat="@drawable/image_11" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/searchEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/ic_search"
+            app:layout_constraintBottom_toBottomOf="@+id/headerPictureOne"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:inputType="text"
+            android:background="@null"
+            app:layout_constraintHorizontal_bias="0.93"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.17000002" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/header"
+            style="@style/header"
+            android:layout_width="@dimen/o"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="@dimen/_55sdp"
+            android:layout_marginEnd="@dimen/_50sdp"
+            android:text="@string/academy_for_fpos"
+            app:layout_constraintBottom_toBottomOf="@+id/headerPictureOne"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.705" />
+
+        <HorizontalScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/headerPictureOne"
+            app:layout_constraintVertical_bias="0.004">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+
+                >
+
+                <RelativeLayout
+                    android:id="@+id/spinner1Layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:background="@color/light_green"
+                    android:padding="@dimen/_8sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintCircleRadius="@dimen/_5sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spinner1"
+                        style="@style/Widget.AppCompat.DropDownItem.Spinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="@dimen/_30sdp"
+                        tools:ignore="RtlSymmetry" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/spinner2Layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:background="@color/light_green"
+                    android:padding="@dimen/_8sdp"
+                    app:layout_constraintBottom_toBottomOf="@+id/spinner1Layout"
+                    app:layout_constraintStart_toEndOf="@+id/spinner1Layout"
+                    app:layout_constraintTop_toTopOf="@+id/spinner1Layout">
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spinner2"
+
+                        style="@style/Widget.AppCompat.DropDownItem.Spinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="@dimen/_30sdp"
+                        tools:ignore="RtlSymmetry" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/spinner3Layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:background="@color/light_green"
+                    android:padding="@dimen/_8sdp"
+                    app:layout_constraintBottom_toBottomOf="@+id/spinner2Layout"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/spinner2Layout"
+                    app:layout_constraintTop_toTopOf="@+id/spinner2Layout">
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+
+                        android:id="@+id/spinner3"
+                        style="@style/Widget.AppCompat.DropDownItem.Spinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="@dimen/_30sdp"
+                        tools:ignore="RtlSymmetry" />
+                </RelativeLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </HorizontalScrollView>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_180sdp"
+
+
+            android:src="@drawable/group_1988"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nestedScrollView">
+
+        </androidx.appcompat.widget.AppCompatImageView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOngoingCourse"
+            style="@style/subheading1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/ongoing_courses"
+            android:layout_marginStart="@dimen/_14sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/viewAll1"
+            style="@style/viewAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/view_all"
+            android:layout_marginEnd="@dimen/_14sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvOngoingCourse"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvOngoingCourse"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvOngoingCourse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginStart="@dimen/_9sdp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvOngoingCourse"
+
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTrending"
+            style="@style/subheading2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_14sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="@string/trending_now"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rvOngoingCourse" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTrendingNow"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/o"
+            android:layout_marginStart="@dimen/_8sdp"
+
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTrending" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvBlog"
+            style="@style/subheading1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="@string/blog"
+            android:layout_marginStart="@dimen/_14sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rvTrendingNow" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/viewAll2"
+            style="@style/viewAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/view_all"
+            android:layout_marginEnd="@dimen/_14sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvBlog"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvBlog"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvBlog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvBlog" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvInformationVideos"
+            style="@style/subheading1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="@string/informative_videos"
+            android:layout_marginStart="@dimen/_14sdp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rvBlog" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/viewAll3"
+            style="@style/viewAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/view_all"
+            android:layout_marginEnd="@dimen/_14sdp"
+
+            app:layout_constraintBottom_toBottomOf="@+id/tvInformationVideos"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tvInformationVideos"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvInformationVideos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_6sdp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvInformationVideos" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLatestCourses"
+            style="@style/subheading1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="@string/latest_courses"
+            android:layout_marginStart="@dimen/_14sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rvInformationVideos" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/viewAll4"
+            style="@style/viewAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/view_all"
+            android:layout_marginEnd="@dimen/_14sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvLatestCourses"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintTop_toTopOf="@+id/tvLatestCourses"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvLatestCourse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvLatestCourses" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNewsEvents"
+            style="@style/subheading3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="@string/news_and_events"
+            android:layout_marginStart="@dimen/_14sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rvLatestCourse"
+            app:layout_goneMarginTop="@dimen/_20sdp" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/seeAll1"
+            style="@style/seeAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/see_all"
+            android:layout_marginEnd="@dimen/_14sdp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvNewsEvents"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintTop_toTopOf="@+id/tvNewsEvents"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvNewsEventsOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="horizontal"
+            android:layout_marginStart="@dimen/_5sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvNewsEvents" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvNewsEventsTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rvNewsEventsOne" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="27dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="577dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout></androidx.core.widget.NestedScrollView>
