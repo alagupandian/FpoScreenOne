@@ -14,7 +14,7 @@ import com.example.fposcreenone.model.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 
-// comment on main
+
 
 
 class MainActivity : AppCompatActivity() {
@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val sampp1: String ? =  null
 
         val sample1 = arrayOf("Explorer", "Explorer", "Explorer", "Explorer")
         val sample2 = arrayOf("My Learnings", "My Learnings", "My Learnings", "My Learnings")
@@ -257,7 +258,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setInformativeList() {
-        var informativeVideosList: MutableList<InformativeVideosModel> = ArrayList()
+        val informativeVideosList: MutableList<InformativeVideosModel> = ArrayList()
 
         informativeVideosList.add(
             InformativeVideosModel(
