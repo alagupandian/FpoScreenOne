@@ -14,6 +14,9 @@ import com.example.fposcreenone.model.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 
+// comment on main
+
+
 class MainActivity : AppCompatActivity() {
 
 
