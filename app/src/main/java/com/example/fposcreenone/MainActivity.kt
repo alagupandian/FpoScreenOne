@@ -9,20 +9,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.PagerSnapHelper
-import androidx.recyclerview.widget.RecyclerView
 import com.example.fposcreenone.adapter.*
 import com.example.fposcreenone.model.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
-
-
-
-
-
-
-
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -135,7 +127,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setNewsAndEventList() {
-         val newsEventsList2: MutableList<NewsEventsModel2> = ArrayList()
+        val newsEventsList2: MutableList<NewsEventsModel2> = ArrayList()
 
         val newsEventsList: MutableList<NewsEventsModel> = ArrayList()
 
@@ -225,7 +217,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setLatestCourse() {
-         val latestCourseList: MutableList<LatestCoursesModel> = ArrayList()
+        val latestCourseList: MutableList<LatestCoursesModel> = ArrayList()
 
         latestCourseList.add(
             LatestCoursesModel(
@@ -262,7 +254,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setInformativeList() {
-         var informativeVideosList: MutableList<InformativeVideosModel> = ArrayList()
+        var informativeVideosList: MutableList<InformativeVideosModel> = ArrayList()
 
         informativeVideosList.add(
             InformativeVideosModel(
@@ -303,8 +295,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setBlogList() {
-         val blogList: MutableList<BlogModel> = ArrayList()
+        val blogList: MutableList<BlogModel> = ArrayList()
 
+        blogList.add(
+            BlogModel(
+                "Agriculture",
+                "Incididunt ea deserunt culpa",
+                "Dolor labore laborum incididunt ea deserunt culpa non pariatur. Labore ",
+                ContextCompat.getDrawable(this, R.drawable.blogpic)!!
+            )
+        )
         blogList.add(
             BlogModel(
                 "Agriculture",
@@ -347,7 +347,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setTrendingList() {
-         val trendingNowList: MutableList<TrendingNowModel> = ArrayList()
+        val trendingNowList: MutableList<TrendingNowModel> = ArrayList()
 
         trendingNowList.add(
             TrendingNowModel(
@@ -406,7 +406,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setOngoingList() {
-         val ongoingCourseModelList: MutableList<OngoingCourseModel> = ArrayList()
+        val ongoingCourseModelList: MutableList<OngoingCourseModel> = ArrayList()
 
         ongoingCourseModelList.add(
             OngoingCourseModel(
@@ -436,9 +436,7 @@ class MainActivity : AppCompatActivity() {
         PagerSnapHelper().attachToRecyclerView(rvOngoingCourse)
 
 
-
     }
-
 
 
 }
