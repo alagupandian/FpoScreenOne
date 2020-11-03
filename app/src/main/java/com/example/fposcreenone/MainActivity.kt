@@ -14,7 +14,8 @@ import com.example.fposcreenone.model.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 
-// comment on main
+// comment on main for second time
+
 
 
 class MainActivity : AppCompatActivity() {
@@ -257,7 +258,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setInformativeList() {
-        var informativeVideosList: MutableList<InformativeVideosModel> = ArrayList()
+        val informativeVideosList: MutableList<InformativeVideosModel> = ArrayList()
 
         informativeVideosList.add(
             InformativeVideosModel(
